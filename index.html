@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="icon" href="#" />
+    <title>Mr. Bates Home Page</title>
+    <meta
+      name="description"
+      content="Recreation of Mr. Chows website desgined by allison romero 2025"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar" role="navigation">
+        <button class="logo">mr bates</button>
+        <button class="menu-btn" aria-label="button for navigation">
+          <img
+            src="../imgs/icons8-menu-50.png"
+            alt="menu icon"
+            class="menu-icon"
+            aria-label="menu icon"
+          />
+          <img
+            src="../imgs/close-icon.png"
+            alt="close icon"
+            class="close-icon"
+            arial-label="close icon"
+          />
+        </button>
+      </div>
+      <nav class="overlay" aria-label="Main Navigation">
+        <ul class="overlay-content">
+          <li><a href="../pages/index.html">home</a></li>
+          <li><a href="../pages/about.html">about</a></li>
+          <li><a href="../pages/hours.html">hours</a></li>
+          <li><a href="../pages/events.html">events</a></li>
+          <li class="contact-link">
+            <a
+              id="contact-link"
+              href="../pages/contact.html"
+              aria-labelledby="contact-link contact"
+              >contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!------MODAL --->
+    <div class="popup-container">
+      <div class="popup">
+        <button class="popup-btn">&times;</button>
+        <div class="modal-content">
+          <p class="modal-intro">
+            JOIN US FOR HAPPY HOUR<br />
+            FOR SPECIALLY PRICED COCKTAILS<br />
+            Monday - Friday 6PM - 8PM
+          </p>
+          <p class="modal-title">
+            <span class="fancy-txt">Happy Hour at</span><br />
+            <span class="modal-logo">MR BATES</span>
+          </p>
+          <p class="modal-footer">
+            AVAILABLE ONLY AT L.A. AND<br />
+            NEW YORK LOCATIONS
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--------------->
+    <div class="slideshow-container" id="home" aria-label="slideshow">
+      <div class="slideshow">
+        <div class="slide active">
+          <img
+            src="../imgs/food1.jpg"
+            alt="plate of food"
+            class="slide-img"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="../imgs/food2.jpg"
+            alt="plate of food"
+            class="slide-img"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="../imgs/patio.jpg"
+            alt="outside patio"
+            class="slide-img"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+      <button class="next-btn slide-btn" aria-label="next button">
+        <svg
+          height="40"
+          width="60"
+          viewbox="0 0 50 50"
+          class="next-icon slide-icon"
+          aria-label="next"
+        >
+          <line
+            x1="0"
+            x2="20"
+            y1="40"
+            y2="25"
+            stroke="white"
+            stroke-width="6"
+            stroke-linecap="round"
+          />
+          <line
+            x1="20"
+            x2="0"
+            y1="25"
+            y2="10"
+            stroke="white"
+            stroke-width="6"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+      <button class="pause-play-btn slide-btn" aria-label="pause play button">
+        <svg
+          width="40"
+          height="40"
+          class="play-icon slide-icon"
+          viewBox="0 0 14 14"
+          aria-label="play icon"
+        >
+          <path d="M0 0 L10 5 L0 10 Z" fill="white" />
+        </svg>
+        <svg
+          height="40"
+          width="40"
+          viewbox="0 0 50 50"
+          class="pause-icon slide-icon"
+          aria-label="pause"
+        >
+          <line x1="5" y1="0" x2="5" y2="30" stroke="white" stroke-width="5" />
+          <line
+            x1="20"
+            y1="0"
+            x2="20"
+            y2="30"
+            stroke="white"
+            stroke-width="5"
+          />
+        </svg>
+      </button>
+      <button class="prev-btn slide-btn" aria-label="previous button">
+        <svg
+          height="40"
+          width="60"
+          viewbox="0 0 50 50"
+          class="prev-icon slide-icon"
+          aria-label="previous"
+        >
+          <line
+            stroke="white"
+            stroke-width="6"
+            stroke-linecap="round"
+            x1="20"
+            y1="10"
+            x2="0"
+            y2="25"
+          />
+          <line
+            stroke="white"
+            stroke-width="6"
+            stroke-linecap="round"
+            x1="20"
+            y1="40"
+            x2="0"
+            y2="25"
+          />
+        </svg>
+      </button>
+    </div>
+    <section
+      class="locations-area"
+      role="region"
+      aria-labelledby="locations-title"
+    >
+      <div class="container">
+        <h2 class="locations-title fade" id="locations-title">locations</h2>
+        <div class="locations my-locations">
+          <div class="tokyo location fade">
+            <img
+              src="../imgs/tokyo.jpg"
+              alt="tokyo cafe"
+              class="place-img"
+              loading="lazy"
+            />
+            <a href="#" class="place-link">Tokyo</a>
+          </div>
+          <div class="paris location fade">
+            <img
+              src="../imgs/paris.jpg"
+              alt="paris cafe"
+              class="place-img"
+              loading="lazy"
+            />
+            <a href="#" class="place-link">Paris</a>
+          </div>
+          <div class="la location fade">
+            <img
+              src="../imgs/la.jpg"
+              alt="los angeles cafe"
+              class="place-img"
+              loading="lazy"
+            />
+            <a href="#" class="place-link">Los Angeles</a>
+          </div>
+          <div class="ny location fade">
+            <img
+              src="../imgs/ny.jpg"
+              alt="new york eatery"
+              class="place-img"
+              loading="lazy"
+            />
+            <a href="#" class="place-link">New York</a>
+          </div>
+          <div class="london location fade">
+            <img
+              src="../imgs/london.jpg"
+              alt="london eatery"
+              class="place-img"
+              loading="lazy"
+            />
+            <a href="#" class="place-link">London</a>
+          </div>
+          <div class="seattle location fade">
+            <img
+              src="../imgs/seattle.jpg"
+              alt="seattle cafe"
+              class="place-img"
+              loading="lazy"
+            />
+            <a href="#" class="place-link">Seattle</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" role="region" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="cta-bx fade">
+          <img
+            src="../imgs/fancy-dish.jpg"
+            alt="fancy dinner plate"
+            class="cta-img crop"
+            loading="lazy"
+          />
+          <hgroup>
+            <h2 id="about-heading">WORLD FAMOUS DINING EXPERIENCE</h2>
+            <p>
+              A luxury dining experience begins the moment you enter this
+              exquisitely designed space, where attentive staff anticipates your
+              every need and guides you to a table set with meticulous care.
+              Each course that arrives is a work of art, offering a symphony of
+              flavors, aromas, and textures that awaken the senses. This
+              seamless blend of gourmet cuisine, sophisticated ambiance, and
+              personalized service creates an unforgettable evening, where every
+              detail is crafted to provide a feeling of indulgence and delight
+              from start to finish.
+            </p>
+          </hgroup>
+        </div>
+        <div class="events-bx fade">
+          <img
+            src="../imgs/events.jpg"
+            alt="a fancy Restaurant"
+            class="events-img"
+            loading="lazy"
+          />
+          <div class="event-title">
+            <h2 class="event-heading">private events</h2>
+            <p>We’d love to host your next event!</p>
+            <button class="events-btn">Inquire Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="socials">
+          <img
+            src="../imgs/twitter.png"
+            alt="social icon"
+            class="social xs-icon"
+          />
+          <img src="../imgs/linkedin.png" alt="social icon" class="social" />
+          <img
+            src="../imgs/github.png"
+            alt="social icon"
+            class="social xs-icon"
+          />
+        </div>
+        <div class="footer-links">
+          <h4>ACCESSIBILITY</h4>
+          <h4>NEWSLETTER</h4>
+          <button class="footer-btn" aria-label="order online button">
+            order online
+          </button>
+        </div>
+        <p class="copyright">&copy;Copyright 2025. Design By Allison Romero</p>
+      </div>
+    </footer>
+    <script src="../js/index.js" defer></script>
+    <script defer src="../js/slideshow.js"></script>
+    <script defer src="../js/modal.js"></script>
+  </body>
+</html>
