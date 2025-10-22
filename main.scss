@@ -1,0 +1,268 @@
+@use "modules" as *;
+@use "modules/vars" as *;
+@use "modules/hours" as *;
+
+.locations-area {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.locations-title {
+  padding-top: 0.7rem;
+  font-size: 2em;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.place-img {
+  object-fit: cover;
+  width: 80%;
+  height: 17em;
+}
+
+.place-img:hover,
+.place-link:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.place-img,
+.place-link {
+  transition: transform 250ms ease-in;
+}
+
+.place-link {
+  color: $white;
+  font-size: 14px;
+  border: 1px solid $white;
+  background: $black;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  height: 2em;
+  width: 8em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25em;
+}
+
+.place-link:hover {
+  animation: colorSlide 300ms ease-in-out 1 forwards;
+}
+
+@keyframes colorSlide {
+  0% {
+    overflow: hidden;
+    background-image: linear-gradient(125deg, $black, $dark-pink, $black);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  overflow: hidden;
+  transition: transform 250ms ease-in-out;
+}
+
+.locations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 4rem 1.5rem;
+}
+
+.cta {
+  margin-top: 6rem;
+}
+
+.cta-img {
+  object-fit: cover;
+  height: auto;
+}
+
+.events-img,
+.cta-img {
+  outline: 1px solid $white;
+  outline-offset: -15px;
+}
+
+.crop {
+  height: 20rem;
+}
+
+.cta-bx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.events-bx {
+  padding: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.event-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-heading {
+  font-weight: normal;
+  font-size: 1.8em;
+}
+
+.events-img {
+  object-fit: contain;
+}
+
+.events-btn {
+  font-size: 0.9rem;
+}
+
+.social {
+  width: 30px;
+  height: 30px;
+}
+
+.xs-icon {
+  background: $white;
+  border-radius: 50%;
+}
+
+.socials {
+  display: flex;
+  gap: 7px;
+  align-self: flex-start;
+}
+
+footer {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.footer-btn {
+  width: 11rem;
+  font-size: 15px;
+}
+
+@media (min-width: 850px) {
+  .cta-bx {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta-img {
+    width: 60%;
+    height: auto;
+  }
+
+  .crop {
+    height: auto;
+  }
+
+  hgroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .events-bx {
+    flex-direction: row;
+  }
+  .events-img {
+    width: 60%;
+    object-fit: cover;
+  }
+  .events-title {
+    width: 40%;
+  }
+}
+
+@media (min-width: 750px) {
+  footer {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    padding-bottom: 1rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 100%;
+    align-items: baseline;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .place-img {
+    width: 70%;
+    height: 15rem;
+  }
+}
+
+.fade {
+  opacity: 0;
+}
+
+.fade.visible {
+  animation: scrollFadeIn 1s ease-in-out 0s normal forwards;
+}
+
+@keyframes scrollFadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.locations.bounce {
+  animation: bounceIn 1s ease-in-out 0s 1 normal forwards;
+}
+
+.my-locations.slides-in {
+  animation: slideInOnResize 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes slideInOnResize {
+  0% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
