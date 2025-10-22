@@ -1,0 +1,42 @@
+@use "vars.scss" as *;
+
+.event-header {
+  background-image: url(imgs/private-event.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.event-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.event-info h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.event-title {
+  text-shadow: 2px 2px 5px $black;
+}
+
+.event-desc {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.event-info button {
+  margin: 0 auto;
+}
+
+.padding {
+  padding-bottom: 5rem;
+}

@@ -1,0 +1,238 @@
+@use "vars.scss" as *;
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 1;
+  z-index: 2000;
+  width: 100%;
+  min-height: 3.6rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+}
+
+.nav-bar.scrolled {
+  background: $black;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  position: fixed;
+  top: 15px;
+  width: 2.5rem;
+  height: 1.8rem;
+  right: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-btn:hover,
+.menu-btn:focus,
+.logo:hover,
+.logo-focus {
+  background: unset;
+  color: unset;
+}
+
+.logo {
+  background: transparent;
+  border: none;
+  position: fixed;
+  top: 10px;
+  left: 13px;
+  color: white;
+  font-size: 2.35rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 5px;
+  z-index: 900;
+  text-shadow: 2px 2px 2px $black;
+}
+
+.logo:hover {
+  cursor: none;
+}
+
+.menu-btn {
+  z-index: 1000;
+}
+
+.menu-icon {
+  opacity: 1;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  height: 1.67rem;
+  width: 2.5rem;
+}
+
+.close-icon {
+  opacity: 0;
+  display: none;
+  object-fit: contain;
+  object-position: center;
+  height: 1.67rem;
+  width: 2.4rem;
+}
+
+.overlay-content {
+  display: none;
+  color: black;
+  overflow: hidden;
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: $black;
+  overflow: hidden;
+}
+
+.overlay li {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 1rem;
+  letter-spacing: 7px;
+  line-height: 2.8;
+}
+
+.overlay li:hover {
+  text-decoration: underline 1px solid $pink;
+  cursor: pointer;
+  color: $pink;
+}
+
+@keyframes slide {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 50vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+
+.overlay.open {
+  /*height: 100vh;*/
+  animation-name: slide;
+  animation-duration: 0.4s;
+  animation-iteration-count: none;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  z-index: 950;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-content a {
+  text-align: center;
+}
+
+.overlay-content a:first-child {
+  letter-spacing: 5px;
+}
+
+.overlay-content.open {
+  display: block;
+  animation: none;
+}
+
+.menu-btn.open .menu-icon {
+  display: none;
+  opacity: 0;
+}
+
+.menu-btn.open .close-icon {
+  display: block;
+  opacity: 1;
+}
+
+@media (min-width: 900px) {
+  .menu-btn,
+  .mneu-btn-open {
+    display: none;
+  }
+  .nav-bar,
+  .nav-bar.open {
+    display: flex;
+    justify-content: center;
+    height: 0;
+  }
+  .logo {
+    position: static;
+    padding: 0.25em 0;
+  }
+
+  .close-btn.open {
+    display: none;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .overlay,
+  .overlay.open {
+    overflow: visible;
+    height: 110px;
+    animation: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .overlay.scrolled {
+    background-color: $black;
+  }
+
+  .overlay-content,
+  .overlay-content.open {
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 1em;
+  }
+  .overlay li {
+    font-family: Helvetica, sans-serif;
+    text-shadow: 7px 7px 8px $black;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0.75em 1.25em;
+    letter-spacing: 0;
+  }
+  .overlay .contact-link {
+    border: 1px solid $pink;
+  }
+  .overlay .contact-link:hover,
+  .overlay .contact-link:focus {
+    background-color: $pink;
+    color: $black;
+    text-shadow: none;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,46 @@
+@use "vars.scss" as *;
+
+.about-area p {
+  line-height: 1.7;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.about-intro,
+.about-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.about-img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.about-img:first-of-type {
+  margin-top: 5rem;
+}
+
+.about-intro p {
+  padding-top: 1rem;
+}
+
+.about-cta h2 {
+  padding: 0;
+}
+
+.about-cta .about-img {
+  padding: 1rem 0;
+}
+
+.about-summary {
+  padding-bottom: 3rem;
+}
+
+.dish-img {
+  margin: 0;
+  padding: 0;
+}

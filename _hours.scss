@@ -1,0 +1,85 @@
+@use "vars.scss" as *;
+
+.hrs-header {
+  height: 85vh;
+  background-image: url(imgs/london.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.hours {
+  padding-bottom: 3rem;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-location {
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+}
+
+.diner-hrs {
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.reserve-btn {
+  padding-left: 1em;
+}
+
+.history {
+  border-top: 1px solid $pink;
+  padding-top: 0.5rem;
+}
+
+iframe {
+  width: 100%;
+  z-index: -1;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.map-btn {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+@media (min-width: 700px) {
+  .map-btn {
+    top: 50%;
+    left: 40%;
+  }
+}
+
+.reviews {
+  text-align: center;
+}
+
+q {
+  text-align: center;
+  font-style: italic;
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
