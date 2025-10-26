@@ -222,6 +222,8 @@ h4:hover {
 
 .event-header {
   background-image: url(imgs/private-event.jpg);
+  background-image: -webkit-image-set(url("../srcset-imgs/private-event700w.jpg") 1x, url("../srcset-imgs/private-event900w.jpg") 2x, url("../srcset-imgs/private-event1920w.jpg") 3x);
+  background-image: image-set(url("../srcset-imgs/private-event700w.jpg") 1x, url("../srcset-imgs/private-event900w.jpg") 2x, url("../srcset-imgs/private-event1920w.jpg") 3x);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -507,7 +509,9 @@ h4:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(imgs/drink-fancy.jpg);
+  background-image: url(imgs/drink-fancy.jpg);
+  background-image: -webkit-image-set(url("../srcset-imgs/drink-fancy400w.jpg") 1x, url("../srcset-imgs/drink-fancy500w.jpg") 2x, url("../srcset-imgs/drink-fancy640w.jpg") 3x);
+  background-image: image-set(url("../srcset-imgs/drink-fancy400w.jpg") 1x, url("../srcset-imgs/drink-fancy500w.jpg") 2x, url("../srcset-imgs/drink-fancy640w.jpg") 3x);
   color: #ffffff;
   background-size: cover;
   background-position: center;
@@ -728,6 +732,8 @@ h4:hover {
 .hrs-header {
   height: 85vh;
   background-image: url(imgs/london.jpg);
+  background-image: -webkit-image-set(url("../srcset-imgs/london700w.jpg") 1x, url("../srcset-imgs/london900w.jpg") 2x, url("../srcset-imgs/london1920w.jpg") 3x);
+  background-image: image-set(url("../srcset-imgs/london700w.jpg") 1x, url("../srcset-imgs/london900w.jpg") 2x, url("../srcset-imgs/london1920w.jpg") 3x);
   background-size: cover;
   background-position: center;
   overflow: hidden;
