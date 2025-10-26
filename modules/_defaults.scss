@@ -1,0 +1,110 @@
+@use "vars.scss" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $black;
+  color: $white;
+  font-family: Helvetica, sans-serif;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: 1px solid rgb(199, 54, 131);
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  background: black;
+  text-transform: uppercase;
+  width: 10rem;
+  cursor: pointer;
+  margin-top: 1em;
+  text-align: center;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(214, 145, 200);
+  color: $black;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: optima;
+  font-size: 40px;
+  padding-top: 1.5em;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem;
+  font-size: 2rem;
+  font-family: Helvetica, sans-serif;
+}
+
+h4 {
+  text-align: center;
+}
+
+section {
+  padding: 2rem;
+}
+
+hgroup p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+hgroup h2 {
+  padding: 0;
+}
+
+h4 {
+  letter-spacing: 1px;
+  transition: all 300ms ease-in;
+  cursor: pointer;
+}
+
+h4:hover {
+  color: $pink;
+  text-decoration: underline 1px solid $pink;
+}
+
+.copyright {
+  font-size: 14px;
+  text-align: center;
+}
