@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact form</title>
+    <link rel="icon" href="#" />
+    <link rel="stylesheet" href="../main.css" />
+    <meta
+      name="description"
+      content="Recreation of Mr. Chows website desgined by allison romero 2025"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar" role="navigation">
+        <button class="logo">mr bates</button>
+        <button class="menu-btn" aria-label="button for navigation">
+          <img
+            src="../imgs/icons8-menu-50.png"
+            alt="menu icon"
+            class="menu-icon"
+            aria-label="menu icon"
+          />
+          <img
+            src="../imgs/close-icon.png"
+            alt="close icon"
+            class="close-icon"
+            arial-label="close icon"
+          />
+        </button>
+      </div>
+      <nav class="overlay" aria-label="Main Navigation">
+        <ul class="overlay-content">
+          <li><a href="../index.html">home</a></li>
+          <li><a href="../pages/about.html">about</a></li>
+          <li><a href="../pages/hours.html">hours</a></li>
+          <li><a href="../pages/events.html">events</a></li>
+          <li class="contact-link">
+            <a
+              href="../pages/contact.html"
+              aria-labelledby="contact-link contact"
+              >contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="form-area" role="region" aria-labelledby="contact-title">
+      <div class="container">
+        <h1 id="contact-title">contact us</h1>
+        <p class="form-title">
+          Send us a message and we’ll get back to you as soon as possible.
+          <br /><br />
+          Looking forward to hearing from you!
+        </p>
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name - <em>Required</em></label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email - <em>Required</em></label>
+            <input
+              type="email"
+              id="email"
+              required
+              pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
+            />
+          </div>
+          <div class="form-group">
+            <label for="number">Phone Number - <em>Required</em></label>
+            <input type="tel" id="number" required />
+          </div>
+          <div class="form-group">
+            <label for="location"
+              >Which location are you trying to contact? -
+              <em>Optional</em></label
+            >
+            <select name="location" id="location">
+              <option value="intro" disabled selected>
+                Which location are you trying to contact?
+              </option>
+              <option value="London">London</option>
+              <option value="New York">New York</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Tokyo">Tokyo</option>
+              <option value="Paris">Paris</option>
+              <option value="Seattle">Seattle</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Inquiry"
+              >What are you getting in touch about? - <em>Optional</em></label
+            >
+            <select name="Inquiry" id="Inquiry">
+              <option value="reason" disabled selected>
+                What are you getting in touch about?
+              </option>
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Press Inquiry">Press Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message - <em>Required</em></label>
+            <textarea name="message" id="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" value="submit" aria-label="submit button">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+    <div class="terms">
+      <div class="container">
+        <p>
+          This site is protected by reCAPTCHA and the Google Privacy Policy and
+          Terms of Service apply.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="socials">
+          <img
+            src="../imgs/twitter.png"
+            alt="social icon"
+            class="social xs-icon"
+          />
+          <img src="../imgs/linkedin.png" alt="social icon" class="social" />
+          <img
+            src="../imgs/github.png"
+            alt="social icon"
+            class="social xs-icon"
+          />
+        </div>
+        <div class="footer-links">
+          <h4>ACCESSIBILITY</h4>
+          <h4>NEWSLETTER</h4>
+          <button class="footer-btn" aria-label="order online button">
+            order online
+          </button>
+        </div>
+        <p class="copyright">&copy;Copyright 2025. Design By Allison Romero</p>
+      </div>
+    </footer>
+    <script src="../js/index.js" defer></script>
+  </body>
+</html>
